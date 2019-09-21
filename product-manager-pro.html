@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QLSP Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h3>Add New Product</h3>
+<div class="container" >
+    <form action="javascript:void(0);" method="POST">
+        <input type="text" id="addProduct" placeholder="Add product">
+        <input type="submit" value="Add" onclick="app.add()">
+    </form>
+</div>
+<h3>Display All Product</h3>
+<table>
+    <tr>
+        <th style=" text-align: left;"> Product Name</th>
+        <th style="text-align: right;color: brown" colspan ="2" >
+            <p id="numProduct"> </p>
+        </th>
+    </tr>
+    <tbody id="products"></tbody>
+</table>
+<script src="script.js"></script>
+
+<div id="spoiler" role="aria-hidden"  method="POST">
+    <h3>Edit product </h3>
+    <div class="container">
+        <form action="javascript:void(0);" id="saveEdit">
+            <input type="text" id="editProduct">
+            <input type="submit" value="Edit"/>
+            <a onclick="closeInput()" aria-label="Close"> &#10006;</a>
+        </form>
+    </div>
+</div>
+</body>
+</html>
